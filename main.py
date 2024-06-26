@@ -19,15 +19,26 @@ elif nome.isspace():
 # 02) Solicita ao usuário que digite o valor do seu salário
 # COnverte a entrada para um número de ponto flutuante
 
-salario = float(input("Digite o seu salário: "))
-if salario.isspace():
-    print("Voce digitou so espaco")
+try:
+    salario = float(input("Digite o valor do seu salário: "))
+    if salario < 0:
+        print("Por favor, digite um valor positivo para o salário.")
+except ValueError:
+    print("Entrada inválida para o salário. Por favor, digite um número.")
     exit()
+
 
 # 03) Solicita ao usuário que digite o valor do bonus recebido 
 # Converte a entrada para um número de ponto flutuante
 
-bonus = float(input("Digite o valor do seu bônus: "))
+
+try:
+    bonus = float(input("Digite o valor do seu bônus: "))
+    if bonus < 0:
+        print("Por favor, digite um valor positivo para o bonus")
+except ValueError:
+    print("Entrada inválida para salário. Por favor digite um numero")
+    exit()
 
 #print(bonus)
 
